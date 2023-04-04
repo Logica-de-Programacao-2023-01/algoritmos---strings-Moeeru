@@ -13,7 +13,49 @@ func main() {
 	fmt.Printf("A palavra %s fica dessa forma toda maiuscula %s", p1, strings.ToUpper(p1))
 }
 #Exercicio 2
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	leitor := bufio.NewScanner(os.Stdin)
+	fmt.Print("digite uma palavra: ")
+	leitor.Scan()
+	p1 := leitor.Text()
+	p1 = strings.ReplaceAll(p1, " ", "")
+	fmt.Printf(p1)
+}
+
 #Exercicio 3
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	leitor := bufio.NewScanner(os.Stdin)
+	fmt.Print("digite uma palavra: ")
+	leitor.Scan()
+	p1 := leitor.Text()
+	troca := ""
+	fmt.Print("Digite um carcter a ser trocado: ")
+	fmt.Scan(&troca)
+	novo := ""
+	fmt.Print("Digite o novo carctere: ")
+	fmt.Scan(&novo)
+	p1 = strings.ReplaceAll(p1, troca, novo)
+	fmt.Printf(p1)
+}
+
 #Exercicio 4
 #Exercicio 5
 #Exercicio 6

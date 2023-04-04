@@ -1,0 +1,87 @@
+#Exercicio 1
+package main
+
+import "fmt"
+
+func main() {
+	p1 := ""
+	p2 := ""
+	fmt.Print("digite uma palavra: ")
+	fmt.Scan(&p1)
+	fmt.Print("digite outra palavra: ")
+	fmt.Scan(&p2)
+	fmt.Printf("As palavras juntas formam %s", p1+p2)
+}
+
+#Exercicio 2
+package main
+
+import "fmt"
+
+func main() {
+	p1 := ""
+	fmt.Print("digite uma palavra: ")
+	fmt.Scan(&p1)
+	fmt.Printf("A palavra %s tem %d caracteres", p1, len(p1))
+}
+
+#Exercicio 3
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	p1 := ""
+	l := ""
+	fmt.Print("digite uma palavra: ")
+	fmt.Scan(&p1)
+	fmt.Print("digite uma letra: ")
+	fmt.Scan(&l)
+	nl := strings.Count(p1, l)
+	fmt.Printf("Na palavra %s tem %d letras %s", p1, nl, l)
+}
+
+#Exercicio 4
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	p1 := ""
+	fmt.Print("digite uma palavra: ")
+	fmt.Scan(&p1)
+	fmt.Printf("A palavra %s fica dessa forma toda maiuscula %s", p1, strings.ToUpper(p1))
+}
+
+#Exercicio 5
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	var p1 string
+	p2 := ""
+	n := 0
+	fmt.Print("digite uma palavra: ")
+	fmt.Scan(&p1)
+	fmt.Print("Digite um número: ")
+	fmt.Scan(&n)
+	if n > len(p1) {
+		fmt.Println("Numero inválido, tente novamente: ")
+		fmt.Scan(&n)
+	}
+	for i := 0; i < n; i++ {
+		p2 += strings.ToUpper(string(p1[i]))
+	}
+	p2 += string(p1[n:])
+	fmt.Printf("A palavra %s fica dessa forma toda maiuscula %s", p1, p2)
+}

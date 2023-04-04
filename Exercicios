@@ -1,0 +1,32 @@
+#Exercicio 1
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func main() {
+	p1 := ""
+	fmt.Print("digite uma palavra: ")
+	fmt.Scan(&p1)
+	fmt.Printf("A palavra %s fica dessa forma toda maiuscula %s", p1, strings.ToUpper(p1))
+}
+#Exercicio 2
+#Exercicio 3
+#Exercicio 4
+#Exercicio 5
+#Exercicio 6
+#Exercicio 7
+#Exercicio 8
+#Exercicio 9
+#Exercicio 10
+#Exercicio 12
+#Exercicio 13
+#Exercicio 14
+#Exercicio 15
+#Exercicio 16
+#Exercicio 17
+#Exercicio 18
+#Exercicio 19
+#Exercicio 20

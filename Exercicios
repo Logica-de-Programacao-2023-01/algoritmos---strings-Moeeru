@@ -57,13 +57,122 @@ func main() {
 }
 
 #Exercicio 4
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+)
+
+func main() {
+	leitor := bufio.NewScanner(os.Stdin)
+	fmt.Print("digite uma frase: ")
+	leitor.Scan()
+	p1 := leitor.Text()
+	fmt.Print("digite uma frase: ")
+	leitor.Scan()
+	p2 := leitor.Text()
+	if p1 == p2 {
+		fmt.Print("As frases são iguais")
+	} else {
+		fmt.Print("As frases são diferentes")
+	}
+}
+
 #Exercicio 5
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func main() {
+	p1 := ""
+	fmt.Print("Digite uma palavra: ")
+	fmt.Scan(&p1)
+	i, err := strconv.ParseFloat(p1, 64)
+	if err != nil {
+
+		fmt.Printf("A string %s não é um float\n", p1)
+
+	} else {
+
+		fmt.Printf("A string é um float de valor %f\n", i)
+
+	}
+}
+
 #Exercicio 6
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	leitor := bufio.NewScanner(os.Stdin)
+	fmt.Print("digite uma frase: ")
+	leitor.Scan()
+	p1 := leitor.Text()
+	esp := strings.Count(p1, " ")
+	pala := esp + 1
+	fmt.Printf("A frase %s tem %d palavras", p1, pala)
+}
+
 #Exercicio 7
 #Exercicio 8
 #Exercicio 9
+package main
+
+import (
+	"bufio"
+	"fmt"
+	"os"
+	"strings"
+)
+
+func main() {
+	leitor := bufio.NewScanner(os.Stdin)
+	fmt.Print("digite uma palavra: ")
+	leitor.Scan()
+	p1 := leitor.Text()
+	troca := ""
+	fmt.Print("Digite um carcter a ser trocado: ")
+	fmt.Scan(&troca)
+	novo := ""
+	fmt.Print("Digite o novo carctere: ")
+	fmt.Scan(&novo)
+	p1 = strings.ReplaceAll(p1, troca, novo)
+	fmt.Printf(p1)
+}
 #Exercicio 10
 #Exercicio 12
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	p1 := ""
+	p2 := ""
+	fmt.Print("Digite uma palavra para ver se é um palindromo: ")
+	fmt.Scan(&p1)
+	for _, v := range p1 {
+		p2 = string(v) + p2
+	}
+	if p1 == p2 {
+		fmt.Print("Essa frase é um palindromo")
+	} else {
+		fmt.Print("Essa frase não é um palindromo ")
+	}
+}
+
 #Exercicio 13
 #Exercicio 14
 #Exercicio 15

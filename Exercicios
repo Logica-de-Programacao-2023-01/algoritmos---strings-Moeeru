@@ -196,6 +196,45 @@ func main() {
 	fmt.Printf(p1)
 }
 #Exercicio 10
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	frase := ""
+	fraseInv := ""
+	frase1 := ""
+	fraseInv1 := ""
+	fmt.Print("Digite uma frase: ")
+	fmt.Scan(&frase)
+	fmt.Print("Digite outra frase: ")
+	fmt.Scan(&frase1)
+	for _, l := range frase {
+		fraseInv = string(l) + fraseInv
+	}
+	for _, l := range frase1 {
+		fraseInv1 = string(l) + fraseInv1
+	}
+	if frase == fraseInv {
+		fmt.Println("A frase 1 é um palindromo")
+	} else {
+		fmt.Println("A frase 1 não é um palindromo")
+	}
+	if frase1 == fraseInv1 {
+		fmt.Println("A frase 2 é um palindromo")
+	} else {
+		fmt.Println("A frase 2 não é um palindromo")
+	}
+	if fraseInv == fraseInv1 {
+		fmt.Println("As frases são palindromos entre si")
+	} else {
+		fmt.Println("As frases não são um palindromo entre si")
+	}
+}
+#Exercicio 11
+
 #Exercicio 12
 package main
 

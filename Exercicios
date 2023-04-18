@@ -125,7 +125,52 @@ func main() {
 }
 
 #Exercicio 7
+package main
+
+import (
+	"fmt"
+	"strconv"
+)
+
+func main() {
+	frase := ""
+	con := 0
+	fmt.Print("Digite uma frase: ")
+	fmt.Scan(&frase)
+	for _, l := range frase {
+		_, err := strconv.Atoi(string(l))
+		if err != nil {
+			con++
+		} else {
+			strconv.Atoi(string(l))
+			fmt.Println("A frase tem um número ")
+			break
+		}
+
+	}
+	if con > 0 {
+		fmt.Println("A frase não tem número")
+	}
+}
+ 
 #Exercicio 8
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	frase := ""
+	fraseInv := ""
+	fmt.Print("Digite uma frase: ")
+	fmt.Scan(&frase)
+	for _, l := range frase {
+		fraseInv = string(l) + fraseInv
+	}
+	fmt.Println("A frase invertida é ", fraseInv)
+}
+
 #Exercicio 9
 package main
 
